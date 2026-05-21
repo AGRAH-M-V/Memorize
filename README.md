@@ -29,6 +29,24 @@ npm run preview
 
 Deploy the `dist` folder to any static host.
 
+## Deploy To Cloudflare Pages
+
+This app is ready for Cloudflare Pages.
+
+- Framework preset: `Vite`
+- Build command: `npm run build`
+- Build output directory: `dist`
+- Root directory: `/`
+
+For Git-based deploys, connect the GitHub repo in Cloudflare Pages and use the settings above. For a manual deploy with Wrangler:
+
+```bash
+npm run build
+npx wrangler pages deploy dist --project-name memorize
+```
+
+The repo includes `wrangler.toml` with `pages_build_output_dir = "dist"` and `public/_redirects` so browser refreshes route back to the React app.
+
 ## How To Play
 
 1. Watch the glowing tiles.
