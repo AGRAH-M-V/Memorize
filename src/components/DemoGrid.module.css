@@ -1,0 +1,30 @@
+.wrapper {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.18; /* More subtle opacity for readability */
+  pointer-events: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  width: min(180px, 35vw);
+  aspect-ratio: 1;
+}
+
+.tile {
+  border-radius: var(--radius-sm);
+  border: 3px solid #000000;
+  box-shadow: 
+    0 4px 0 #000000,
+    inset -2px -2px 0 rgba(0, 0, 0, 0.2),
+    inset 2px 2px 0 rgba(255, 255, 255, 0.1);
+}
+
+.glow {
+  display: none;
+}

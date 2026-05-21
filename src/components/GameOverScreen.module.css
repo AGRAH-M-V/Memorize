@@ -1,0 +1,207 @@
+.screen {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  padding: 24px;
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 12, 22, 0.85);
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  padding: 28px 24px;
+  background: var(--bg-elevated);
+  border: 4px solid #000000;
+  border-radius: var(--radius);
+  box-shadow:
+    6px 6px 0px rgba(0, 0, 0, 0.4),
+    inset -4px -4px 0px rgba(0, 0, 0, 0.25),
+    inset 4px 4px 0px rgba(255, 255, 255, 0.08);
+  text-align: center;
+}
+
+.heading {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--text);
+  text-shadow: 2px 2px 0px #000000;
+  margin-bottom: 12px;
+}
+
+.newRecord {
+  display: inline-block;
+  font-size: 8px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  background: #7e2553;
+  border: 3px solid #000000;
+  padding: 6px 12px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+.scoreBlock {
+  margin: 16px 0 24px;
+}
+
+.scoreLabel {
+  display: block;
+  font-size: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #a3a7c4;
+  margin-bottom: 8px;
+  text-shadow: 1px 1px 0px #000;
+}
+
+.scoreValue {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 900;
+  color: var(--neon);
+  text-shadow: 3px 3px 0px #000000;
+  display: block;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+  padding: 16px 0;
+  border-top: 3px solid #000000;
+  border-bottom: 3px solid #000000;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.statLabel {
+  font-size: 7px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: #a3a7c4;
+  text-shadow: 1px 1px 0px #000;
+}
+
+.statValue {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 1.5px 1.5px 0px #000;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.primaryBtn,
+.secondaryBtn,
+.homeBtn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 16px;
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  border: 4px solid #000000;
+  text-shadow: 1.5px 1.5px 0px #000;
+  transition: transform 0.05s ease, box-shadow 0.05s ease;
+}
+
+/* Green Play Again Button */
+.primaryBtn {
+  background: var(--neon);
+  box-shadow: 
+    0 6px 0 #000000,
+    inset -4px -4px 0px rgba(0, 0, 0, 0.25),
+    inset 4px 4px 0px rgba(255, 255, 255, 0.4);
+}
+
+.primaryBtn:hover {
+  transform: translateY(2px);
+  box-shadow: 
+    0 4px 0 #000000,
+    inset -4px -4px 0px rgba(0, 0, 0, 0.25),
+    inset 4px 4px 0px rgba(255, 255, 255, 0.4);
+}
+
+.primaryBtn:active {
+  transform: translateY(6px);
+  box-shadow: 
+    0 0px 0 #000000,
+    inset -4px -4px 0px rgba(0, 0, 0, 0.25),
+    inset 4px 4px 0px rgba(255, 255, 255, 0.4);
+}
+
+/* Blue Share Button */
+.secondaryBtn {
+  background: #29adff;
+  box-shadow: 
+    0 6px 0 #000000,
+    inset -4px -4px 0px rgba(0, 0, 0, 0.25),
+    inset 4px 4px 0px rgba(255, 255, 255, 0.3);
+}
+
+.secondaryBtn:hover {
+  transform: translateY(2px);
+  box-shadow: 
+    0 4px 0 #000000,
+    inset -4px -4px 0px rgba(0, 0, 0, 0.25),
+    inset 4px 4px 0px rgba(255, 255, 255, 0.3);
+}
+
+.secondaryBtn:active {
+  transform: translateY(6px);
+  box-shadow: 
+    0 0px 0 #000000,
+    inset -4px -4px 0px rgba(0, 0, 0, 0.25),
+    inset 4px 4px 0px rgba(255, 255, 255, 0.3);
+}
+
+/* Pink Home Button */
+.homeBtn {
+  background: #ff77a8;
+  box-shadow: 
+    0 6px 0 #000000,
+    inset -4px -4px 0px rgba(0, 0, 0, 0.25),
+    inset 4px 4px 0px rgba(255, 255, 255, 0.3);
+}
+
+.homeBtn:hover {
+  transform: translateY(2px);
+  box-shadow: 
+    0 4px 0 #000000,
+    inset -4px -4px 0px rgba(0, 0, 0, 0.25),
+    inset 4px 4px 0px rgba(255, 255, 255, 0.3);
+}
+
+.homeBtn:active {
+  transform: translateY(6px);
+  box-shadow: 
+    0 0px 0 #000000,
+    inset -4px -4px 0px rgba(0, 0, 0, 0.25),
+    inset 4px 4px 0px rgba(255, 255, 255, 0.3);
+}

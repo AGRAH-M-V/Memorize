@@ -1,0 +1,73 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --neon: #00e436;
+  /* Retro Green */
+  --neon-dim: #00b02d;
+  /* Darker Green */
+  --neon-glow: transparent;
+  --bg: #1d2b53;
+  /* Deep retro blue */
+  --bg-elevated: #2a2b3d;
+  /* Dark panel grey */
+  --surface: #5f574f;
+  /* Idle slate tile */
+  --surface-border: #000000;
+  /* Thick black pixel border */
+  --text: #ffffff;
+  --text-muted: #ffcc00;
+  /* Retro yellow */
+  --error: #ff004d;
+  /* Retro red */
+  --error-glow: transparent;
+  --font-display: 'Press Start 2P', system-ui, monospace;
+  --font-body: 'Press Start 2P', system-ui, monospace;
+  --radius: 12px;
+  --radius-sm: 6px;
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 11px;
+  /* Scaled down for Press Start 2P */
+  line-height: 1.6;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0px #000000;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: none;
+  font-smooth: never;
+  touch-action: manipulation;
+  user-select: none;
+  image-rendering: pixelated;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+input {
+  font-family: inherit;
+}
